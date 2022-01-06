@@ -17,8 +17,9 @@
 
 <h1>Blog</h1>
 {#each posts as post}
-	<h2>{post.title.rendered}</h2>
+	<h2>{@html post.title.rendered}</h2>
 	<p>{@html post.excerpt.rendered}</p>
+	<a href="">Read More</a>
 {/each}
 
 <!-- {JSON.stringify(posts)} -->
