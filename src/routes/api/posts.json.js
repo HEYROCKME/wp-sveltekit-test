@@ -1,5 +1,7 @@
+import { BASE_URL, POSTS_API } from '$lib/variables';
+
 export const get = async () => {
-	const res = await fetch('http://127.0.0.1/wordpress/wp-json/wp/v2/posts');
+	const res = await fetch(`${BASE_URL}${POSTS_API}`);
 
 	const posts = await res.json();
 
