@@ -6,8 +6,10 @@ export const get = async (request) => {
 
 	const posts = await res.json();
 	const post = posts[0];
+	// let date = new Date(post.date);
 	post.featureImage = post._embedded['wp:featuredmedia'][0];
-
+	post.author = post._embedded.author[0].name;
+	// post.dateFormat = date;
 	return {
 		status: 200,
 		body: post

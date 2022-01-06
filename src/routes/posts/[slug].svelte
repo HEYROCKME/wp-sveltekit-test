@@ -16,8 +16,14 @@
 	export let post;
 </script>
 
-<!-- {JSON.stringify(post._embedded['wp:featuredmedia'][0].source_url)} -->
+<!-- {JSON.stringify(post)} -->
 <h1>{@html post.title.rendered}</h1>
+<p>
+	{post.date}
+</p>
+
+by:<a href="#about">{post.author}</a>
+
 {#if post.featureImage}
 	<img
 		class="post-feature-img"
