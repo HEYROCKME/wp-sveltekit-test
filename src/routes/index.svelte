@@ -1,7 +1,7 @@
 <script context="module">
 	//testing post
 	export const load = async ({ fetch }) => {
-		const res = await fetch('http://127.0.0.1/wordpress/wp-json/wp/v2/posts');
+		const res = await fetch('/api/posts.json'); //Fetch posts from Api/
 		const posts = await res.json();
 		return {
 			props: {
