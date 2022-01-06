@@ -17,9 +17,19 @@
 
 <h1>Blog</h1>
 {#each posts as post}
+	<img
+		class="list-feature-image"
+		alt={post.featureImage.alt_text}
+		src={post.featureImage.source_url}
+	/>
 	<h2>{@html post.title.rendered}</h2>
 	<p>{@html post.excerpt.rendered}</p>
 	<a href={`/posts/${post.id}`}>Read More</a>
 {/each}
 
 <!-- {JSON.stringify(posts)} -->
+<style>
+	img {
+		width: 100%;
+	}
+</style>
