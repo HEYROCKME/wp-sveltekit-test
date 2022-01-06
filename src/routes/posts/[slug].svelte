@@ -1,8 +1,8 @@
 <script context="module">
 	export const load = async ({ url, params, fetch }) => {
-		const id = params.id;
+		const slug = params.slug;
 
-		const res = await fetch(`/api/posts/${id}.json`); //Fetch posts from Api/
+		const res = await fetch(`/api/posts/${slug}.json`); //Fetch posts from Api/
 		const post = await res.json();
 		return {
 			props: {

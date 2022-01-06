@@ -24,12 +24,12 @@
 	/>
 	<h2>{@html post.title.rendered}</h2>
 	<p>{@html post.excerpt.rendered}</p>
-	<a href={`/posts/${post.id}`}>Read More</a>
+	<a href={`/posts/${post.slug}`}>Read More</a>
 {/each}
 
 <!-- {JSON.stringify(posts)} -->
 <style>
-	img {
+	.list-feature-image {
 		width: 100%;
 	}
 </style>
