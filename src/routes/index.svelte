@@ -19,7 +19,7 @@
 {#each posts as post}
 	<h2>{@html post.title.rendered}</h2>
 	<p>{@html post.excerpt.rendered}</p>
-	<a href="">Read More</a>
+	<a href={`/posts/${post.id}`}>Read More</a>
 {/each}
 
 <!-- {JSON.stringify(posts)} -->
